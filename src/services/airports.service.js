@@ -6,9 +6,8 @@ class AirportsService {
     constructor(airports){
         this._airports = airports;
     }
-
-    getAll(){
-        return this._airports.filter(a => a.code).map(avoidEmptyCity);
+ getAll(){
+            return this._airports.filter(a => a.code).map(avoidEmptyCity).sort((a, b) => (a.city > b.city)
     }
 
     getByCode(code) {
